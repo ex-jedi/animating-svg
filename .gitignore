@@ -1,1 +1,4 @@
+#General Stuff
+node_modules
+.vscode
 prepros-6.config

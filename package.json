@@ -1,0 +1,33 @@
+{
+  "name": "animating-svg",
+  "version": "1.0.0",
+  "description": "SVG Animation Learning",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ex-jedi/animating-svg.git"
+  },
+  "keywords": [
+    "SVG"
+  ],
+  "author": "Mark Phoenix",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ex-jedi/animating-svg/issues"
+  },
+  "homepage": "https://github.com/ex-jedi/animating-svg#readme",
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.6.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "prettier": "^1.19.1"
+  }
+}
