@@ -1,0 +1,74 @@
+.ball {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  background: black;
+  -webkit-animation: animation-name-you-pick 2s 2s 3 alternate ease-in-out forwards;
+  animation: animation-name-you-pick 2s 2s 3 alternate ease-in-out forwards; }
+
+.ball2 {
+  -webkit-animation: animation-name-you-pick 2s 2s 3 alternate ease-in-out forwards;
+  animation: animation-name-you-pick 2s 2s 3 alternate ease-in-out forwards; }
+
+.ball3 {
+  -webkit-animation: second-animation 2s 2s 3 alternate ease-in-out forwards;
+  animation: second-animation 2s 2s 3 alternate ease-in-out forwards; }
+
+@-webkit-keyframes animation-name-you-pick {
+  0% {
+    background: blue;
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  50% {
+    background: purple;
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px); }
+  100% {
+    background: red;
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px); } }
+
+@keyframes animation-name-you-pick {
+  0% {
+    background: blue;
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  50% {
+    background: purple;
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px); }
+  100% {
+    background: red;
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px); } }
+
+@-webkit-keyframes second-animation {
+  0% {
+    fill: blue;
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  50% {
+    fill: purple;
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px); }
+  100% {
+    fill: red;
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px); } }
+
+@keyframes second-animation {
+  0% {
+    fill: blue;
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  50% {
+    fill: purple;
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px); }
+  100% {
+    fill: red;
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px); } }
+
+/*# sourceMappingURL=style.css.map */
