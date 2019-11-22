@@ -15,5 +15,25 @@
 }
 
 .svg-wrapper {
-  width: 800px;
+  width: 1500px;
+}
+
+[id^="Bird"] {
+  opacity: 0;
+  animation: fade-in-out 15s ease-in-out infinite;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+    transform: scale(2);
+  }
+  25%,
+  75% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+  }
 }
