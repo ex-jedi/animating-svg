@@ -158,30 +158,30 @@ h2:before {
   }
 }
 
-@media screen and (max-width: 500px) {
-  #paper {
-    padding: 50px 60px;
-  }
-  p.first:before {
-    margin-top: 0 !important;
-  }
-  .kells2,
-  .kells1 {
-    display: none;
-  }
-  .a {
-    animation: hover 2s ease-in-out infinite both;
-  }
-  .kells3 {
-    display: block !important;
-  }
-  .mountain,
-  [class^="mountain"],
-  .grass,
-  [class^="grass"] {
-    transform: skew(1.5deg) !important;
-  }
-}
+// @media screen and (max-width: 500px) {
+//   #paper {
+//     padding: 50px 60px;
+//   }
+//   p.first:before {
+//     margin-top: 0 !important;
+//   }
+//   .kells2,
+//   .kells1 {
+//     display: none;
+//   }
+//   .a {
+//     animation: hover 2s ease-in-out infinite both;
+//   }
+//   .kells3 {
+//     display: block !important;
+//   }
+//   .mountain,
+//   [class^="mountain"],
+//   .grass,
+//   [class^="grass"] {
+//     transform: skew(1.5deg) !important;
+//   }
+// }
 
 @media screen and (max-width: 700px) {
   .kells3 {

@@ -170,27 +170,6 @@ h2:before {
     -webkit-transform: translateX(0px);
     transform: translateX(0px); } }
 
-@media screen and (max-width: 500px) {
-  #paper {
-    padding: 50px 60px; }
-  p.first:before {
-    margin-top: 0 !important; }
-  .kells2,
-  .kells1 {
-    display: none; }
-  .a {
-    -webkit-animation: hover 2s ease-in-out infinite both;
-    animation: hover 2s ease-in-out infinite both; }
-  .kells3 {
-    display: block !important; }
-  .mountain,
-  [class^="mountain"],
-  .grass,
-  [class^="grass"] {
-    -webkit-transform: skew(1.5deg) !important;
-    -ms-transform: skew(1.5deg) !important;
-    transform: skew(1.5deg) !important; } }
-
 @media screen and (max-width: 700px) {
   .kells3 {
     display: block; }
