@@ -53,7 +53,7 @@
 #Sun {
   opacity: 0;
   animation: fade-in 2s 1s ease forwards;
-  transform: translateX(-50%);
+  // transform: translateX(-50%);
 }
 
 @keyframes fade-in {
