@@ -49,3 +49,15 @@
 .cls-13 {
   fill: #141414;
 }
+
+#Sun {
+  opacity: 0;
+  animation: fade-in 2s 1s ease forwards;
+  transform: translateX(-50%);
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
