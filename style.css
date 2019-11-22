@@ -37,17 +37,36 @@
 .cls-13 {
   fill: #141414; }
 
+.svg-wrapper {
+  width: 600px; }
+
 #Sun {
-  opacity: 0;
-  -webkit-animation: fade-in 2s 1s ease forwards;
-  animation: fade-in 2s 1s ease forwards; }
+  -webkit-animation: sun-path 20s linear infinite;
+  animation: sun-path 20s linear infinite;
+  -webkit-transform: translateX(-76%) translateY(5%);
+  -ms-transform: translateX(-76%) translateY(5%);
+  transform: translateX(-76%) translateY(5%); }
 
-@-webkit-keyframes fade-in {
+@-webkit-keyframes sun-path {
+  0% {
+    -webkit-transform: translateX(-76%) translateY(5%);
+    transform: translateX(-76%) translateY(5%); }
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
   100% {
-    opacity: 1; } }
+    -webkit-transform: translateX(76%) translateY(5%);
+    transform: translateX(76%) translateY(5%); } }
 
-@keyframes fade-in {
+@keyframes sun-path {
+  0% {
+    -webkit-transform: translateX(-76%) translateY(5%);
+    transform: translateX(-76%) translateY(5%); }
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
   100% {
-    opacity: 1; } }
+    -webkit-transform: translateX(76%) translateY(5%);
+    transform: translateX(76%) translateY(5%); } }
 
 /*# sourceMappingURL=style.css.map */

@@ -50,14 +50,23 @@
   fill: #141414;
 }
 
-#Sun {
-  opacity: 0;
-  animation: fade-in 2s 1s ease forwards;
-  // transform: translateX(-50%);
+.svg-wrapper {
+  width: 600px;
 }
 
-@keyframes fade-in {
+#Sun {
+  animation: sun-path 20s linear infinite;
+  transform: translateX(-76%) translateY(5%);
+}
+
+@keyframes sun-path {
+  0% {
+    transform: translateX(-76%) translateY(5%);
+  }
+  50% {
+    transform: translateY(0);
+  }
   100% {
-    opacity: 1;
+    transform: translateX(76%) translateY(5%);
   }
 }
