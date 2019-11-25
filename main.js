@@ -1,7 +1,11 @@
+/* eslint-disable no-undef */
+/* eslint-disable prefer-const */
+/* eslint-disable no-var */
+/* eslint-disable func-names */
 $(document).ready(function() {
   $('.main').on('click', function() {
-    var magLine = $(this).find('.magnifier line'),
-      mainInput = $(this).find('input');
+    let magLine = $(this).find('.magnifier line');
+    var mainInput = $(this).find('input');
 
     if ($(this).hasClass('open')) {
       $(this).removeClass('open');

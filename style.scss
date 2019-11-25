@@ -41,7 +41,7 @@ input {
 
 .x-out {
   width: 6px;
-  padding: 5px 6px;
+  padding: 5px 5px;
   transition: 0.5s all $quad;
   cursor: pointer;
   line {
@@ -60,6 +60,7 @@ input {
   box-shadow: none;
   border: none;
   outline: none;
+  color: inherit;
 }
 
 .magnifier circle,
