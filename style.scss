@@ -1,110 +1,58 @@
-$quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-$quad-out: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-
 body {
-  width: 100vw;
-  height: 100vh;
-  font-family: "lato", sans-serif;
-  color: #e8afe1;
-  background: #ad1283; /* Old browsers */
-  background: -moz-linear-gradient(
-    -45deg,
-    #ad1283 0%,
-    #8f45d8 100%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    -45deg,
-    #ad1283 0%,
-    #8f45d8 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    135deg,
-    #ad1283 0%,
-    #8f45d8 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad1283', endColorstr='#8f45d8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: #222;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-.magnifier,
-input,
-.x-out {
-  margin-left: 30vw;
-  margin-top: 40vh;
-  pointer: cursor;
+h3 {
+  text-align: center;
+  width: 50%;
+  margin: 500px 0 0 23%;
+  color: #666;
   position: absolute;
-}
-
-.magnifier,
-input {
-  width: 400px;
-}
-
-.x-out {
-  width: 6px;
-  padding: 5px 5px;
-  transition: 0.5s all $quad;
-  cursor: pointer;
-  line {
-    stroke-width: 2px;
-    opacity: 0;
-    transform: scale(0);
-    transform-origin: 50% 50%;
+  clear: both;
+  a {
+    color: #999;
+    text-decoration: none;
+    transition: 0.3s ease color;
+    &:hover {
+      color: #ccc;
+    }
   }
 }
 
-input {
-  font-size: 35px;
-  padding-left: 30px;
-  background: none;
-  cursor: pointer;
-  box-shadow: none;
-  border: none;
-  outline: none;
-  color: inherit;
+svg {
+  position: absolute;
+  left: 50%;
+  margin-left: -500px;
 }
 
-.magnifier circle,
-.magnifier line,
-.x-out line {
+path {
   fill: none;
-  stroke: #fff;
-  stroke-linecap: round;
-  transition: 0.25s all $quad-out;
+  stroke-linejoin: round;
 }
 
-.magnifier {
-  line {
-    transition: 0.25s all $quad-out;
-    transform: rotate(0deg) translateY(0px);
-  }
-  circle {
-    transition: 0.25s all $quad-out;
-    transform: scale(1);
-  }
+.land {
+  fill: #444;
 }
 
-/* open state */
+.states {
+  stroke: #555;
+}
 
-.open .magnifier {
-  line {
-    transition: 0.65s all $quad;
-    transform: rotate(-2.5deg) translateY(14px);
-  }
-  circle {
-    transition: 0.35s all $quad;
-    transform: scale(0.5);
+.hexagons path {
+  opacity: 0;
+}
+
+$elements: 2000;
+@for $i from 0 to $elements {
+  .hexagons path:nth-child(#{$i}) {
+    $per: $i/50;
+    animation: 2s #{$per}s ease hexagons both;
   }
 }
 
-.open .x-out line {
-  opacity: 1;
-  transform: scale(1);
-  transition: 0.75s all $quad;
-}
-
-//firefox hack for padding on x
-@-moz-document url-prefix() {
-  .x-out {
-    padding: 5px !important;
+@keyframes hexagons {
+  100% {
+    opacity: 1;
   }
 }
