@@ -1,58 +1,61 @@
+$color1: #ada8b6; //rgba(173, 168, 182, 100)
+$color2: #ffeedb; //rgba(255, 238, 219, 100)
+$color3: #4c3b4d; //rgba(76, 59, 77, 100)
+$color4: #a53860; //rgba(165, 56, 96, 100)
+$color5: #61c9a8; //rgba(97, 201, 168, 100)
+
 body {
-  background: #222;
-  font-family: "Roboto Condensed", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background: #111;
 }
 
-h3 {
-  text-align: center;
-  width: 50%;
-  margin: 500px 0 0 23%;
-  color: #666;
-  position: absolute;
-  clear: both;
-  a {
-    color: #999;
-    text-decoration: none;
-    transition: 0.3s ease color;
-    &:hover {
-      color: #ccc;
-    }
+.ct-chart {
+  width: 90vw;
+  max-width: 1100px;
+  height: 375px;
+  margin: 5vh 6.5vw;
+  svg {
+    width: 100%;
   }
 }
 
-svg {
-  position: absolute;
-  left: 50%;
-  margin-left: -500px;
+.ct-grids line {
+  stroke: $color3;
+  opacity: 0.4;
 }
 
-path {
+.ct-labels span {
+  color: $color3;
+}
+
+@mixin pathseries($length, $delay, $strokecolor) {
+  stroke-dasharray: $length;
+  stroke-dashoffset: $length;
+  animation: draw 1s $delay ease both;
   fill: none;
-  stroke-linejoin: round;
+  stroke: $strokecolor;
+  opacity: 0.8;
 }
 
-.land {
-  fill: #444;
+.ct-series-a {
+  @include pathseries(1093, 0s, $color1);
 }
 
-.states {
-  stroke: #555;
+.ct-series-b {
+  @include pathseries(1665, 0.25s, $color5);
 }
 
-.hexagons path {
-  opacity: 0;
+.ct-series-c {
+  @include pathseries(1644, 0.5s, $color2);
 }
 
-$elements: 2000;
-@for $i from 0 to $elements {
-  .hexagons path:nth-child(#{$i}) {
-    $per: $i/50;
-    animation: 2s #{$per}s ease hexagons both;
-  }
+.ct-series-d {
+  @include pathseries(1540, 0.75s, $color4);
 }
 
-@keyframes hexagons {
-  100% {
-    opacity: 1;
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
   }
 }
