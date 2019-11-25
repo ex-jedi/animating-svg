@@ -1,61 +1,7 @@
-$color1: #ada8b6; //rgba(173, 168, 182, 100)
-$color2: #ffeedb; //rgba(255, 238, 219, 100)
-$color3: #4c3b4d; //rgba(76, 59, 77, 100)
-$color4: #a53860; //rgba(165, 56, 96, 100)
-$color5: #61c9a8; //rgba(97, 201, 168, 100)
-
-body {
-  width: 100vw;
-  height: 100vh;
-  background: #111;
-}
-
-.ct-chart {
-  width: 90vw;
-  max-width: 1100px;
-  height: 375px;
-  margin: 5vh 6.5vw;
-  svg {
-    width: 100%;
-  }
-}
-
-.ct-grids line {
-  stroke: $color3;
-  opacity: 0.4;
-}
-
-.ct-labels span {
-  color: $color3;
-}
-
-@mixin pathseries($length, $delay, $strokecolor) {
-  stroke-dasharray: $length;
-  stroke-dashoffset: $length;
-  animation: draw 1s $delay ease both;
-  fill: none;
-  stroke: $strokecolor;
-  opacity: 0.8;
-}
-
-.ct-series-a {
-  @include pathseries(1093, 0s, $color1);
-}
-
-.ct-series-b {
-  @include pathseries(1665, 0.25s, $color5);
-}
-
-.ct-series-c {
-  @include pathseries(1644, 0.5s, $color2);
-}
-
-.ct-series-d {
-  @include pathseries(1540, 0.75s, $color4);
-}
-
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
+svg {
+  margin: 40px auto;
+  display: table;
+  circle {
+    fill: magenta;
   }
 }

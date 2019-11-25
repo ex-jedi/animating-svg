@@ -1,28 +1,33 @@
-new Chartist.Line(
-  '.ct-chart',
-  {
-    labels: [1, 2, 3, 4, 5, 6, 7, 8],
-    series: [
-      [11, 12, 13, 11, 12, 10, 11, 10],
-      [12, 11, 17, -1, 0, 18, -2, 8],
-      [0, 8, 12, 1, 15, 3, 18, 1],
-      [3, 2, 12, 15, 16, 3, 18, -3],
-    ],
-  },
-  {
-    high: 20,
-    low: -3,
-    fullWidth: true,
-    // As this is axis specific we need to tell Chartist to use whole numbers only on the concerned axis
-    axisY: {
-      onlyInteger: true,
-      offset: 20,
-    },
-  },
-);
+var dataset = [5, 17, 15, 13, 25, 30, 15, 17, 35, 10, 25, 15],
+  w = 300,
+  h = 300;
 
-setTimeout(function() {
-  var path = document.querySelector('.ct-series-a path');
-  var length = path.getTotalLength();
-  console.log(length);
-}, 3000);
+//create svg
+var svg = d3
+  .select('body')
+  .append('svg')
+  .attr('width', w)
+  .attr('height', h);
+
+//create shapes in svg with data
+svg
+  .selectAll('circle')
+  .data(dataset)
+  .enter()
+  .append('circle')
+  .attr('class', 'circles')
+  .attr('cx', function(d, i) {
+    return 10 + i * 22;
+  })
+  .attr('cy', function(d) {
+    return 200 - d * 5;
+  })
+  .attr('r', function(d) {
+    return d / 2;
+  })
+  .transition()
+  .style('fill', 'teal')
+  .duration(1500)
+  .delay(function(d, i) {
+    return i * 100;
+  });
