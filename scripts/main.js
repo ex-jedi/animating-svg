@@ -1,8 +1,7 @@
 gsap.to('.element', {
-  duration: 3,
+  duration: 1,
   backgroundColor: '#00f',
-  opacity: 1,
-  delay: 2,
+  opacity: 0,
   stagger: () => Math.random(),
   ease: 'ease',
 });
