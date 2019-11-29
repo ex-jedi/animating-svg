@@ -10,6 +10,7 @@
 }
 
 .element {
+  flex: 1 1 auto;
   position: relative;
   right: 0;
   width: 400px;
@@ -18,4 +19,5 @@
   margin: 20px;
   display: block;
   opacity: 0;
+  object-fit: cover;
 }
