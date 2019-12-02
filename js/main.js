@@ -6,8 +6,8 @@ const controller = new ScrollMagic.Controller();
 
 const ourScene = new ScrollMagic.Scene({
   triggerElement: '#project01 img',
-  duration: '90%',
   triggerHook: 0.8,
+  reverse: false,
 });
 ourScene
   .setClassToggle('#project01', 'fade-in')
