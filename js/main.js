@@ -4,11 +4,32 @@
 // Initialising ScrollMagic controller
 const controller = new ScrollMagic.Controller();
 
-const project = document.querySelectorAll('.project');
-console.log(project);
+const pinIntroScene = new ScrollMagic.Scene({
+  triggerElement: '#intro',
+  triggerHook: 0,
+  duration: '30%',
+})
+  .setPin('#intro', { pushFollowers: false })
+  .addIndicators({
+    name: 'pin',
+    colorTrigger: '#000',
+  })
+  .addTo(controller);
 
+const pinIntroScene2 = new ScrollMagic.Scene({
+  triggerElement: '#project01',
+  triggerHook: 0.4,
+})
+  .setPin('#intro', { pushFollowers: false })
+  .addIndicators({
+    name: 'pin two',
+    colorTrigger: '#000',
+  })
+  .addTo(controller);
+
+const project = document.querySelectorAll('.project');
 project.forEach(function(elem) {
-  // Build
+  // Build Scene
   const ourScene = new ScrollMagic.Scene({
     triggerElement: elem.children[0],
     triggerHook: 0.8,
