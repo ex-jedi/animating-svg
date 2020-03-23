@@ -1,87 +1,11 @@
-.cls-1 {
-  fill: #a4caed;
-}
-
-.cls-2 {
-  opacity: 0.75;
-}
-
-.cls-3 {
-  fill: #14614f;
-}
-
-.cls-4 {
-  fill: #f9bc01;
-}
-
-.cls-5 {
-  fill: #f6b494;
-}
-
-.cls-6 {
-  fill: #c55f21;
-}
-
-.cls-7 {
-  fill: #722714;
-}
-
-.cls-8 {
-  fill: #fff;
-}
-
-.cls-9 {
-  fill: #0b0d73;
-}
-
-.cls-10 {
-  fill: #a63800;
-}
-
-.cls-11 {
-  fill: #141414;
-}
 
 .svg-wrapper {
   width: 700px;
+  margin: 0 auto;
 }
 
-#Sun {
-  .cls-4 {
-    animation: sun-path 60s linear infinite;
-    transform: translateX(-635px) translateY(40px);
-  }
-}
-
-#Background {
-  .cls-1 {
-    animation: night-sky 60s linear infinite;
-  }
-}
-
-@keyframes sun-path {
-  10% {
-    transform: translateX(-635px) translateY(60px);
-  }
-  50% {
-    transform: translateX(-130px) translateY(10px);
-  }
-  100% {
-    transform: translateX(355px) translateY(60px);
-  }
-}
-
-@keyframes night-sky {
-  0% {
-    fill: #05040f;
-  }
-  20% {
-    fill: #a4caed;
-  }
-  50% {
-    fill: #a4caed;
-  }
-  100% {
-    fill: #05040f;
-  }
+#Midground_rain,
+#Background_rain {
+  // transform: translateY(100%);
+  // opacity: 0;
 }
