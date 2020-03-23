@@ -1,11 +1,22 @@
-
 .svg-wrapper {
   width: 700px;
   margin: 0 auto;
 }
 
-#Midground_rain,
+@keyframes raining {
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+#Foreground_rain {
+  animation: raining 12s linear infinite forwards;
+}
+
+#Midground_rain {
+  animation: raining 24s linear infinite forwards;
+}
+
 #Background_rain {
-  // transform: translateY(100%);
-  // opacity: 0;
+  animation: raining 48s linear infinite forwards;
 }
